@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/lp-deadpool0/lp-weather-react.git/static/css/main.be519a22.css",
+    "main.js": "/lp-deadpool0/lp-weather-react.git/static/js/main.87468f18.js",
+    "static/media/instagram.svg": "/lp-deadpool0/lp-weather-react.git/static/media/instagram.d83a3d7b099512429f45.svg",
+    "static/media/telegram.svg": "/lp-deadpool0/lp-weather-react.git/static/media/telegram.cc83512c4c64e842a45a.svg",
+    "static/media/feedback.svg": "/lp-deadpool0/lp-weather-react.git/static/media/feedback.200aa010d523a8013b39.svg",
+    "static/media/lang.svg": "/lp-deadpool0/lp-weather-react.git/static/media/lang.f00f2be13823e1b55fd1.svg",
+    "static/media/about.svg": "/lp-deadpool0/lp-weather-react.git/static/media/about.717d598960f141b73ce7.svg",
+    "static/media/google.svg": "/lp-deadpool0/lp-weather-react.git/static/media/google.b8ade9cf895083ce00ab.svg",
+    "index.html": "/lp-deadpool0/lp-weather-react.git/index.html",
+    "static/media/input-search.svg": "/lp-deadpool0/lp-weather-react.git/static/media/input-search.49e937ebc80905e50639.svg",
+    "main.be519a22.css.map": "/lp-deadpool0/lp-weather-react.git/static/css/main.be519a22.css.map",
+    "main.87468f18.js.map": "/lp-deadpool0/lp-weather-react.git/static/js/main.87468f18.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.be519a22.css",
+    "static/js/main.87468f18.js"
+  ]
+}
