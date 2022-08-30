@@ -1,13 +1,17 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Feed = () => {
+  const navigate = useNavigate();
+  const goBack = () => navigate(-1);
+
   return (
     <section className="feedback pop-up-modal">
       <div className="pop-up">
-        <Link to="/">
-          <span className="pop-up__cross">✕</span>
-        </Link>
+        <span onClick={goBack} className="pop-up__cross">
+          ✕
+        </span>
+
         <h2 className="feedback__title h2">Feedback</h2>
         <ul className="feedback__items">
           <li className="feedback__item feedback__item_gg">
@@ -21,9 +25,9 @@ const Feed = () => {
           </li>
         </ul>
 
-        <Link to="/">
-          <button className="pop-up__btn">Ok</button>
-        </Link>
+        <button onClick={goBack} className="pop-up__btn">
+          Ok
+        </button>
       </div>
     </section>
   );

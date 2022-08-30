@@ -1,18 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
 
-const Main = () => {
-  React.useEffect(() => {
-    axios
-      .get(
-        `https://api.openweathermap.org/data/2.5/weather?q=${"Дербент"}&units=metric&apikey=${"024218cabd85ecb2f167a7c212191940"}`
-      )
-      .then((res) => {
-        console.log(res.data.weather[0].main);
-        console.log(res.data.main.temp);
-      });
-  }, []);
+const Main = ({ onSubmit }) => {
+  const [value, setValue] = React.useState("");
+
+  const onChangeHandler = (e) => {
+    setValue(e.target.value.trim());
+  };
+  const onSubmitHandler = () => {
+    onSubmit(value);
+  };
+
+  const warningAlert = () => {
+    return alert("Warning: Invalid data");
+  };
 
   return (
     <section className="main">
@@ -22,10 +23,20 @@ const Main = () => {
         </h1>
 
         <div className="main__input">
-          <input className="main__input" type="text" />
+          <input
+            className="main__input"
+            type="text"
+            onChange={onChangeHandler}
+            value={value}
+            autoComplete="on"
+          />
         </div>
-        <Link to="/weather">
-          <button className="main__submit btn" type="submit">
+        <Link to={value ? "/weather" : warningAlert}>
+          <button
+            className="main__submit btn"
+            onClick={value ? onSubmitHandler : warningAlert}
+            type="submit"
+          >
             Check your weather now
           </button>
         </Link>

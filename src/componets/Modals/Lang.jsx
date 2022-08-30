@@ -1,13 +1,17 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Lang = () => {
+  const navigate = useNavigate();
+  const goBack = () => navigate(-1);
+
   return (
     <section id="_1" className="change-lang pop-up-modal hidden">
       <div className="change-lang__pop-up pop-up">
-        <Link to="/">
-          <span className="pop-up__cross">✕</span>
-        </Link>
+        <span onClick={goBack} className="pop-up__cross">
+          ✕
+        </span>
+
         <h2 className="change-lang__title h2">Change the language</h2>
         <div className="change-lang__lang-container">
           <p className="change-lang__lang change-lang__lang_enabled">English</p>
@@ -15,9 +19,9 @@ const Lang = () => {
           <p className="change-lang__lang">Russian</p>
         </div>
 
-        <Link to="/">
-          <button className="pop-up__btn">Ok</button>
-        </Link>
+        <button onClick={goBack} className="pop-up__btn">
+          Ok
+        </button>
       </div>
     </section>
   );

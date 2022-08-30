@@ -13,6 +13,7 @@ import "./null.scss";
 
 function App() {
   const [logoVisible, setLogoVisible] = React.useState(true);
+  const [place, setPlace] = React.useState("");
 
   const preloader = () => {
     setTimeout(() => {
@@ -22,6 +23,10 @@ function App() {
 
   React.useEffect(preloader, []);
 
+  const onSubmitHandler = (value) => {
+    setPlace(value);
+  };
+
   return (
     <div className="main">
       {logoVisible ? (
@@ -29,11 +34,11 @@ function App() {
       ) : (
         <>
           <Routes>
-            <Route path="/" element={<Main />} />
+            <Route path="/" element={<Main onSubmit={onSubmitHandler} />} />
+            <Route path="/weather" element={<Weather place={place} />} />
             <Route path="/lang" element={<Lang />} />
             <Route path="/about" element={<About />} />
             <Route path="/feed" element={<Feed />} />
-            <Route path="/weather" element={<Weather />} />
           </Routes>
           <Navigatin />
         </>

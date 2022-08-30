@@ -42,6 +42,11 @@ body {
   }
 }
 
+.logotype__img-preloader {
+  width: 256px;
+  height: 256px;
+  animation: show-logo 1.5s ease infinite !important;
+}
 @keyframes show-logo {
   from {
     opacity: 0.3;

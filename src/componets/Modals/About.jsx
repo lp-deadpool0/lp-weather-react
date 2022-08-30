@@ -1,21 +1,23 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const About = () => {
+  const navigate = useNavigate();
+  const goBack = () => navigate(-1);
+
   return (
     <section className="about pop-up-modal ">
       <div className="pop-up">
-        <Link to="/">
-          <span className="pop-up__cross">✕</span>
-        </Link>
+        <span onClick={goBack} className="pop-up__cross">
+          ✕
+        </span>
         <h2 className="about__title h2">About Me</h2>
         <p className="about__descript">
           HI! I'm a Front-End Developer and Web Designer
         </p>
-
-        <Link to="/">
-          <button className="pop-up__btn">Ok</button>
-        </Link>
+        <button onClick={goBack} className="pop-up__btn">
+          Ok
+        </button>
       </div>
     </section>
   );
