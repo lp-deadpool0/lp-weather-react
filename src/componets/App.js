@@ -13,7 +13,7 @@ import "./null.scss";
 
 function App() {
   const [logoVisible, setLogoVisible] = React.useState(true);
-  const [place, setPlace] = React.useState("");
+  // const start = () => play();
 
   const preloader = () => {
     setTimeout(() => {
@@ -21,10 +21,12 @@ function App() {
     }, 1000);
   };
 
-  React.useEffect(preloader, []);
+  React.useEffect(() => {
+    preloader();
+  }, []);
 
   const onSubmitHandler = (value) => {
-    setPlace(value);
+    localStorage.setItem("place", value.trim());
   };
 
   return (
@@ -35,7 +37,7 @@ function App() {
         <>
           <Routes>
             <Route path="/" element={<Main onSubmit={onSubmitHandler} />} />
-            <Route path="/weather" element={<Weather place={place} />} />
+            <Route path="/weather" element={<Weather />} />
             <Route path="/lang" element={<Lang />} />
             <Route path="/about" element={<About />} />
             <Route path="/feed" element={<Feed />} />
