@@ -19,7 +19,7 @@ body {
   //   rgba(254, 214, 227, 0.81) 0%,
   //   rgba(168, 237, 234, 0.81) 100%
   // );
-  background: url("../../public/img/bg.png") 0 0 / cover no-repeat;
+  background: url("../../public/img/Bg.gif") 0 0 / cover no-repeat;
 }
 
 .logotype {
@@ -448,7 +448,7 @@ body {
   background-size: 32px 32px;
   border-radius: 8px;
   transition: 0.3s;
-
+  cursor: pointer;
   & a {
     width: 1005px;
     height: 100%;
@@ -472,7 +472,8 @@ body {
 }
 
 .feedback__item_in {
-  background-image: url("../../public/img/icons/feedback/instagram.svg");
+  background-image: url("../../public/img/icons/feedback/vk.svg");
+  background-size: 40px 40px;
 }
 
 @media (max-width: 1024px) {

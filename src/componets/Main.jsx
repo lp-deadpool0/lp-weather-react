@@ -12,6 +12,7 @@ const Main = ({ onSubmit }) => {
   const onChangeHandler = (e) => {
     setWarningClass("");
     setWarningMessage("");
+
     setValue(e.target.value);
   };
   const onSubmitHandler = () => {
