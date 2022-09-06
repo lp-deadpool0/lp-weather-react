@@ -4,7 +4,7 @@ import Main from "./Main";
 import Navigatin from "./Navigatin";
 import Weather from "./Weather";
 import Modal from "./Modals/Modal";
-import { Routes, Route, NavLink } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import "./style.scss";
 import "./null.scss";
@@ -69,21 +69,27 @@ function App() {
                   <h2 className="feedback__title h2">Feedback</h2>
 
                   <ul className="feedback__items">
-                    <NavLink
-                      to="mailto:lpdead4@gmail.com"
-                      target="_blank"
-                      className="feedback__item feedback__item_gg"
-                    />
-
-                    {/* <li className="feedback__item feedback__item_gg">
-                      <Link to="mailto:lpdead4@gmail.com" />
+                    <li className="feedback__item feedback__item_gg">
+                      <a
+                        href="mailto:lpdead4@gmail.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      ></a>
                     </li>
                     <li className="feedback__item feedback__item_tg">
-                      <Link to="https://t.me/lp_deadpool" />
+                      <a
+                        href="https://t.me/lp_deadpool"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      ></a>
                     </li>
                     <li className="feedback__item feedback__item_in">
-                      <Link to="https://vk.com/app8089300" />
-                    </li> */}
+                      <a
+                        href="https://vk.com/app8089300"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      ></a>
+                    </li>
                   </ul>
                 </Modal>
               }
